@@ -90,9 +90,9 @@ class Humanoid extends CharacterStats {
         width: 1,
         height: 1,
       },
-      healthPoints: 5,
+      hp: 5,
       name: 'Bruce',
-      team: 'Mage Guild',
+      faction: 'Mage Guild',
       weapons: [
         'Staff of Shamalama',
       ],
@@ -106,9 +106,9 @@ class Humanoid extends CharacterStats {
         width: 2,
         height: 2,
       },
-      healthPoints: 15,
+      hp: 15,
       name: 'Sir Mustachio',
-      team: 'The Round Table',
+      faction: 'The Round Table',
       weapons: [
         'Giant Sword',
         'Shield',
@@ -123,9 +123,9 @@ class Humanoid extends CharacterStats {
         width: 2,
         height: 4,
       },
-      healthPoints: 10,
+      hp: 10,
       name: 'Lilith',
-      team: 'Forest Kingdom',
+      faction: 'Forest Kingdom',
       weapons: [
         'Bow',
         'Dagger',
@@ -135,9 +135,9 @@ class Humanoid extends CharacterStats {
   
     console.log(mage.createdAt); // Today's date
     console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
-    console.log(swordsman.healthPoints); // 15 (Not working)
+    console.log(swordsman.hp); // 15 (Not working)
     console.log(mage.name); // Bruce
-    console.log(swordsman.team); // The Round Table (Not working)
+    console.log(swordsman.faction); // The Round Table (Not working)
     console.log(mage.weapons); // Staff of Shamalama
     console.log(archer.language); // Elvish
     console.log(archer.greet()); // Lilith offers a greeting in Elvish.
