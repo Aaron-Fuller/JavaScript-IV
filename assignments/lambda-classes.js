@@ -7,7 +7,7 @@ class Person {
         this.location = personAtts.location;
     }
     speak(){
-        console.log(`Hello my name is ${name}, I am from ${location}`);
+        return `Hello my name is ${this.name}, I am from ${this.location}`;
     }
 }
 
@@ -18,11 +18,11 @@ class Instructor extends Person {
         this.favLanguage = instructorAtts.specialty;
         this.catchPhrase = instructorAtts.catchPhrase;
     }
-    demo (){
-        console.log(`Today we are learning about ${subject}`);
+    demo (subject){
+        return `Today we are learning about ${subject}`;
     }
-    grade () {
-        console.log(`${student.name} receives a perfect score on ${subject}`);
+    grade (subject) {
+        return `${aaron.name} receives a perfect score on ${subject}`;
     }
 }
 
@@ -34,13 +34,13 @@ class Student extends Person {
         this.favSubjects = studentAtts.favSubjects;
     }
     listsSubjects(){
-        console.log(`${student.name}'s favorit subjects are: ${favSubjects}`);
+        return `${this.name}'s favorite subjects are: ${this.favSubjects}`;
     }
-    PRAssignment(){
-        console.log(`${student.name} has submitted a PR for ${subject}`);
+    PRAssignment(subject){
+        return `${alex.name} has submitted a PR for ${subject}`;
     }
-    sprintChallenge(){
-        console.log(`${student.name} has begun sprint challenge on ${subject}`);
+    sprintChallenge(subject){
+        return `${this.name} has begun sprint challenge on ${subject}`;
     }
 } 
 
@@ -50,11 +50,11 @@ class ProjectManager extends Instructor {
         this.gradClassName = pmAtts.gradClassName;
         this.favInstructor = pmAtts.favInstructor;
     }
-    standUp(){
-        console.log(`${name} announces to ${channel}, @channel standy times!`​​​​​);
+    standUp(channel){
+        return `${this.name} announces to ${channel}, @channel standy times!`;
     }
-    debugsCode(){
-        console.log(`${name} debugs ${student.name}'s code on ${subject}`);
+    debugsCode(subject){
+        return `${this.name} debugs ${aaron.name}'s code on ${subject}`;
     }
 }
 
@@ -85,3 +85,14 @@ const aaron = new Student({
     className: 'WEBPT5',
     favSubjects: ['Html', 'CSS', 'JavaScript']
 });
+
+console.log(aaron.speak());
+console.log(alex.speak());
+console.log(cam.speak());
+console.log(cam.demo("JavaScript"));
+console.log(cam.grade("JavaScript"));
+console.log(aaron.listsSubjects());
+console.log(aaron.PRAssignment("Latest assignment"));
+console.log(aaron.sprintChallenge("JS-IV"));
+console.log(alex.standUp("webpt5_alex"));
+console.log(alex.debugsCode("JavaScript"));
